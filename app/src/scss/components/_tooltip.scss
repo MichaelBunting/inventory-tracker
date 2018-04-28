@@ -1,0 +1,109 @@
+.tooltip {
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        @include trans;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+    }
+
+    &::before {
+        content: attr(data-title);
+        color: $white;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 7px 10px;
+        border-radius: 4px;
+        margin: 0 0 10px;
+        background: $oxford-blue;
+    }
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-top-color: $oxford-blue;
+        border-bottom: 0;
+        margin: 0 0 4px;
+    }
+
+    &[data-placement=right] {
+        &::before,
+        &::after {
+            transform: translate(0, -50%);
+            left: 100%;
+            bottom: auto;
+            top: 50%;
+        }
+
+        &::before {
+            margin: 0 0 0 10px;
+        }
+
+        &::after {
+            margin: 0 0 0 5px;
+            border: 5px solid transparent;
+            border-left: 0;
+            border-right-color: $oxford-blue;
+        }
+    }
+
+    &[data-placement=bottom] {
+        &::before,
+        &::after {
+            transform: translate(-50%, 0);
+            left: 50%;
+            top: 100%;
+            bottom: auto;
+        }
+
+        &::before {
+            margin: 10px 0 0;
+        }
+
+        &::after {
+            margin: 5px 0 0;
+            border: 5px solid transparent;
+            border-bottom-color: $oxford-blue;
+            border-top: 0;
+        }
+    }
+
+    &[data-placement=left] {
+        &::before,
+        &::after {
+            transform: translate(0, -50%);
+            left: auto;
+            right: 100%;
+            bottom: auto;
+            top: 50%;
+        }
+
+        &::before {
+            margin: 0 10px 0 0;
+        }
+
+        &::after {
+            margin: 0 5px 0 0;
+            border: 5px solid transparent;
+            border-left-color: $oxford-blue;
+            border-right: 0;
+        }
+    }
+
+    &:hover {
+        &::before,
+        &::after {
+            opacity: 1;
+        }
+    }
+}

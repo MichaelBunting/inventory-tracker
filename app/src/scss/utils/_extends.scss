@@ -1,11 +1,9 @@
-.input {
+.input-reset {
     @include trans;
-    background: $white;
-    width: 100%;
-    border: 2px solid $snuff;
-    border-radius: 4px;
+    border: 1px solid $snuff;
     font-size: 16px;
     font-family: $muli;
     outline: none;
     padding: 15px 30px;
+    border-radius: 4px;
 }

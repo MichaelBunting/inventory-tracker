@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/extends';
 
 @import './base/main';
 @import './base/helpers';
@@ -8,4 +9,8 @@
 @import './layout/menu';
 @import './layout/search';
 
-@import './components/input';
+@import './components/inputs';
+@import './components/buttons';
+@import './components/table-menu';
+@import './components/table';
+@import './components/tooltip';

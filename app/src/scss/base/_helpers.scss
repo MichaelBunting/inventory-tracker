@@ -3,3 +3,21 @@
     margin: 0;
     list-style: none;
 }
+
+.flex {
+    display: flex;
+
+    &--start {
+        justify-content: flex-start;
+    }
+    &--end {
+        justify-content: flex-end;
+    }
+    &--center {
+        align-items: center;
+    }
+
+    &__fill {
+        flex: 1;
+    }
+}

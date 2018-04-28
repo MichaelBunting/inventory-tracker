@@ -1,3 +1,74 @@
 <h1 class="title">
     Inventory
 </h1>
+
+<div class="table-menu flex flex--center">
+    <div class="flex flex__fill">
+        <div class="table-menu__block">
+            <button type="button" class="btn btn--menu disabled">
+                <i class="fa fa-tag"></i>
+            </button>
+        </div>
+        <div class="table-menu__block">
+            <button type="button" class="btn btn--menu disabled">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="flex flex--center flex__fill flex--end">
+        <div class="table-menu__block table-menu__block--lg">
+            <div class="table-menu__desc">
+                10 Items
+            </div>
+        </div>
+        <div class="table-menu__block table-menu__block--lg">
+            <div class="table-menu__action">
+                <i class="fa fa-sliders-h"></i>
+            </div>
+        </div>
+        <div class="table-menu__block table-menu__block--lg">
+            <button type="button" class="btn btn--menu btn--green">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Brand</th>
+            <th>Item Name</th>
+            <th>Date</th>
+            <th class="center">Cost</th>
+            <th class="center">Sold</th>
+            <th class="center">Fees/Shipping</th>
+            <th class="center">Profit</th>
+            <th class="center">Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="shrink">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox1" class="checkbox__input">
+                    <label for="checkbox1" class="checkbox__label"></label>
+                </div>
+            </td>
+            <td>Supreme</td>
+            <td>Chopsticks</td>
+            <td>Jan 1, 2017</td>
+            <td class="center">$34.00</td>
+            <td class="center bold">$80.00</td>
+            <td class="center">$19.91</td>
+            <td class="center bold large">$26.09</td>
+            <td class="center shrink">
+                <span class="table__status table__status--shipped tooltip" data-title="shipped"></span>
+            </td>
+            <td class="center shrink"><i class="fa fa-ellipsis-h table__icon"></i></td>
+        </tr>
+    </tbody>
+</table>

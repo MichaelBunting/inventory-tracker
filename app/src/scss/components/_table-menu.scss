@@ -1,0 +1,36 @@
+.table-menu {
+    margin: 30px 0;
+    width: 100%;
+    color: $lynch;
+}
+
+.table-menu__block {
+    padding: 0 10px;
+
+    &--lg {
+        padding: 0 20px;
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.table-menu__desc {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.table-menu__action {
+    @include trans;
+    font-size: 26px;
+    opacity: .6;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+}

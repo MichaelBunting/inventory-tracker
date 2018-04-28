@@ -1,0 +1,56 @@
+.btn {
+    @extend .input-reset;
+    background: $catskill;
+    cursor: pointer;
+    color: $lynch;
+
+    &.disabled {
+        opacity: .7;
+    }
+
+    &:hover {
+        background: darken($catskill, 5%);
+    }
+
+    &--primary {
+        background: $dodger-blue;
+        color: $white;
+
+        &:hover {
+            background: $mariner;
+        }
+    }
+
+    &--secondary {
+        background: $white;
+        color: $oxford-blue;
+
+        &:hover {
+            background: darken($white, 10%);
+        }
+    }
+
+    &--menu {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        line-height: 40px;
+        text-align: center;
+        font-size: 20px;
+
+        &:hover {
+            background: $white;
+        }
+    }
+
+    &--green {
+        background: $emerald;
+        color: $white;
+        border-color: $emerald;
+
+        &:hover {
+            background: darken($emerald, 10%);
+            border-color: darken($emerald, 10%);
+        }
+    }
+}
