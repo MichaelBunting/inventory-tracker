@@ -7,12 +7,12 @@ module.exports = {
   mode: 'development',
   context: path.join(__dirname, 'app', 'src'),
   entry: [
-    './js/index.js',
+    './js/index',
     './scss/styles.scss',
   ],
   output: {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -25,9 +25,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react']
-          }
-        }
+            presets: ['env', 'stage-1', 'react'],
+          },
+        },
       },
       {
         test: /\.scss$/,
@@ -42,7 +42,7 @@ module.exports = {
             loader: 'sass-loader',
           }],
         }),
-      }
+      },
     ],
   },
   plugins: [
